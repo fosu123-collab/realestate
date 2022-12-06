@@ -187,9 +187,9 @@ app.get("/houses", housesRouter);
 
 app.post("/houses", houseOrderRouter);
 
-app.get("/index", homePageRouter);
+app.get("/", homePageRouter);
 
-app.post("/index", uploadOrderRouter)
+app.post("/", uploadOrderRouter)
 
 app.get("/posts/:postId", singleProductRouter);
 
@@ -248,7 +248,7 @@ app.post("/register",  (req, res) => {
 app.get("/logout",(req, res) => {
   req.logout((err) => {
     if(!err){
-      res.redirect("/index");
+      res.redirect("/");
     }
   }); 
 });

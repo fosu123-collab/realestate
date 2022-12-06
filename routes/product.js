@@ -133,7 +133,7 @@ const uploadOrderRouter = (req, res) => {
 
   order.save((err) => {
     if (!err) {
-      res.redirect("/index");
+      res.redirect("/");
     }
     else{
       console.log(err);
